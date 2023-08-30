@@ -1,0 +1,40 @@
+0) Получение токена
+
+POST /public/auth/
+
+companyId 123
+timestamp 2022-07-08T13:24:41.8328711+03:00
+signature SHA512withRSA(companyId+timestamp) by private_key
+
+
+1) Создание черновика
+
+curl --location --request POST 'https://public-api.rustore.ru/public/v1/application/com.package.com/version' \
+--header 'Content-Type: application/json' \
+--header 'Public-Token: {YOURtoken}' \
+--data-raw '{
+    "appName": "Приложение для RuStore",
+    "appType": "MAIN",
+    "categories":
+    [
+        "news",
+        "education"
+    ],
+    "ageLegal": "7+",
+    "shortDescription": "Приложение для RuStore",
+    "fullDescription": "fullDescription - Приложение для RuStore",
+    "whatsNew": "whatsNew - Приложение для RuStore",
+    "moderInfo": "moderInfo - Приложение для RuStore",
+    "priceValue": 1100
+}'
+
+2) Загрузка APK
+
+curl --location --request POST 'https://public-api.rustore.ru/public/v1/application/{packageName}/version/{versionId}/apk?servicesType=Unknown&isMainApk=true'' \
+--header 'Content-Type: application/json' \
+--header 'Public-Token: {YOURtoken}' \
+--form 'file=@"/Users/User/Downloads/package.apk"'
+
+3) Отправка на модерацию
+
+POST https://public-api.rustore.ru/public/v1/application/{packageName}/version/{versionId}/commit?priorityUpdate={priorityUpdate}

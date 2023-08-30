@@ -1,0 +1,21 @@
+lane :test do
+#get access token
+  ru_store_developer_auth
+  #ru_store_developer_delete_draft(version_id: '2063729045')
+
+#get all versions statuses
+  ru_store_developer_status
+
+#create draft version (this will cache newly created version in the lane context)
+  #versionId = ru_store_developer_create_version
+#get status of created version (version from context)
+  #ru_store_developer_status
+#upload artifact package (APK) of created version (version from context)
+  #ru_store_developer_upload(file_path: 'app.apk')
+#submit created version for moderation
+  #ru_store_developer_commit
+
+#deploy created version manually (if version created previously posted with "MANUALLY" publication type and moderation is complete)
+  #ru_store_developer_publish
+
+end

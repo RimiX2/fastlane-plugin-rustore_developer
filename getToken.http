@@ -1,0 +1,18 @@
+POST https://public-api.rustore.ru/public/v1/application/su.ganiev.dev.mobile.flutter.4onthefloor/version
+Public-Token: eyJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAtMjU2In0.uqEMVVSWeGfShJXhFZnhw1G67V7Lq3qS74TLM-HoLQMU_d2LoYE-TYxgyFeBt1tYxh01h6lVsEdkKiX5qNV-1Mm_RH-DV2oULWrIBQfgtmLQa3V6SKXJgs5QFDI0PZ_QAy7R-od2S-CTaUZl_k5OzlCsiISqy5-e3sSv3rwmlumTjPX453WWB655alcBYRrkd7fYW9LIfodnT8LXSwpyBySR2ScPVyecWU0axcf8m04ylo7WI-8rJs0D_Mecr9tm33Z3HD2AKEQhyjMEYN_KCdFk_UHb7AAhuakhNHf04QV_MgU_hssNDjNd-x9XlszI09v_1Dbnf2jrTp_YPpPuog.Cm_uoAK6Baqqqn3X.MIBxVzbTk-sdncTcV_3smNgsRAriC20cQBTrGgqfXqABD29vsGxnlmARWz1CcgtqG6zAU06sK6fxfPVkNn-0DMa2x9CyO5HBtsaYGl_x-CGpiAgnEZBnvc3gLujSAgSp9QbR0g8R7JULkZyAnzQGoiI5jjjQrZdv.8Fv0jtgCxXvrPpdY-YvgxA
+Content-Type: application/json
+
+{
+    "appName": "Four on the floor",
+    "appType": "MAIN"
+}
+
+###
+
+POST https://public-api.rustore.ru/public/auth/
+Content-Type: application/json
+
+{"companyId": "958897087",
+ "timestamp": "2023-08-23T09:00:32.939+03:00",
+ "signature": "Q40hM+9+AUULGWhtw8uG1yyVAH4eaupuD7mnG46R7iFxk63uDndkElnF3/XC6BKAzaG4M1urs8yuFnIOcGp4SR+oScHQPgxHhC72EmmyFKX0VtyM551E1pDLvF+S1HB9Pv+Vkk8sGeBQXhaEUcOvLf1p/aPrcETVDG0HkEqqxefS/WSNGhAjXy+Tc+NiyaVztIYj6xIqscIUirTZ8fs4IrmF9X6k7e0mmMQHf4GoUMuUXcS1Mf5o+WRd0PcjhP+qBhmovTaFGXSiGNVPrj9jnqdtj/gWRgGOmmT6IfVXMqweoV4dEOqq7qF9oXj8q2Cw95veQu1Sswwdw80Khos9WQ=="
+}
